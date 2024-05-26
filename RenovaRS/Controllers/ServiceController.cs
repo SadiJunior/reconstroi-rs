@@ -1,11 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using RenovaRS.Data;
+﻿using Microsoft.AspNetCore.Mvc;
 using RenovaRS.Data.Context;
 using RenovaRS.Models;
-using System.Data.Common;
-using System.Reflection.Metadata.Ecma335;
+
 
 namespace RenovaRS.Controllers
 {
@@ -52,7 +48,7 @@ namespace RenovaRS.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Service>> PostService(Service service)
+        public async Task<ActionResult<IEnumerable<Service>>> PostService(Service service)
         {
             if (!ModelState.IsValid)
             {
@@ -65,7 +61,7 @@ namespace RenovaRS.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<Service>> PutService(int id, Service service)
+        public async Task<ActionResult<IEnumerable<Service>>> PutService(int id, Service service)
         {
             if (id != service.Id)
             {
@@ -73,6 +69,21 @@ namespace RenovaRS.Controllers
             }
 
             await serviceRepository.UpdateServiceAsync(service);
+
+            return Ok(await serviceRepository.GetServicesAsync());
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<IEnumerable<Service>>> DeleteService(int id)
+        {
+            var dbService = await serviceRepository.GetServiceAsync(id);
+
+            if (dbService is null)
+            {
+                return NotFound($"Service with ID {id} not found.");
+            }
+
+            await serviceRepository.DeleteServiceAsync(id);
 
             return Ok(await serviceRepository.GetServicesAsync());
         }

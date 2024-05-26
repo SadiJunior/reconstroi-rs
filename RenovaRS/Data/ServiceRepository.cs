@@ -30,7 +30,7 @@ namespace RenovaRS.Data
         }
         public async Task UpdateServiceAsync(Service service)
         {
-            // TODO: Check this. I don't know if the Address is being updated.
+            // TODO: Check this.
             this.dataContext.Entry(service).State = EntityState.Modified;
 
             await this.dataContext.SaveChangesAsync();
@@ -42,7 +42,7 @@ namespace RenovaRS.Data
 
             if (service is null)
             {
-                return;
+                throw new KeyNotFoundException($"Service with ID {id} not found.");
             }
 
             dataContext.Services.Remove(service);
