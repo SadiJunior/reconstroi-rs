@@ -55,7 +55,7 @@ namespace RenovaRS.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Service",
+                name: "Services",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -72,27 +72,27 @@ namespace RenovaRS.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Service", x => x.Id);
+                    table.PrimaryKey("PK_Services", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Service_Address_AddressId",
+                        name: "FK_Services_Address_AddressId",
                         column: x => x.AddressId,
                         principalTable: "Address",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_Service_Users_UserId",
+                        name: "FK_Services_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Service_AddressId",
-                table: "Service",
+                name: "IX_Services_AddressId",
+                table: "Services",
                 column: "AddressId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Service_UserId",
-                table: "Service",
+                name: "IX_Services_UserId",
+                table: "Services",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
@@ -105,7 +105,7 @@ namespace RenovaRS.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Service");
+                name: "Services");
 
             migrationBuilder.DropTable(
                 name: "Users");

@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using RenovaRS.Data;
+using RenovaRS.Data.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,8 @@ builder.Services.AddDbContext<DataContext>(options =>
         builder
             .Configuration
             .GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
 
 var app = builder.Build();
 

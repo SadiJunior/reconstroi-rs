@@ -6,6 +6,7 @@ namespace RenovaRS.Data
     public class DataContext : DbContext
     {
         public DbSet<User> Users { get; set; }
+        public DbSet<Service> Services { get; set; }
 
         public DataContext(DbContextOptions<DataContext> options)
             : base(options)

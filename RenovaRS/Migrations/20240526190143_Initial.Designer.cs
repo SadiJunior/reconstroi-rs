@@ -12,7 +12,7 @@ using RenovaRS.Data;
 namespace RenovaRS.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240526171053_Initial")]
+    [Migration("20240526190143_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -99,7 +99,7 @@ namespace RenovaRS.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Service");
+                    b.ToTable("Services");
                 });
 
             modelBuilder.Entity("RenovaRS.Models.User", b =>

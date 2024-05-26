@@ -96,7 +96,7 @@ namespace RenovaRS.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Service");
+                    b.ToTable("Services");
                 });
 
             modelBuilder.Entity("RenovaRS.Models.User", b =>
