@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RenovaRS", "RenovaRS\RenovaRS.csproj", "{D0CB8B06-A451-408D-8D56-B2B7B7B3DDBD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0CB8B06-A451-408D-8D56-B2B7B7B3DDBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0CB8B06-A451-408D-8D56-B2B7B7B3DDBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0CB8B06-A451-408D-8D56-B2B7B7B3DDBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0CB8B06-A451-408D-8D56-B2B7B7B3DDBD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {987BE219-7CF2-43AA-B6D4-E37A163BB454}
+	EndGlobalSection
+EndGlobal
