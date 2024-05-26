@@ -48,7 +48,7 @@ namespace RenovaRS.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Address");
+                    b.ToTable("Addresses");
                 });
 
             modelBuilder.Entity("RenovaRS.Models.Service", b =>
