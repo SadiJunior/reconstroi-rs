@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using RenovaRS.Models;
+﻿using RenovaRS.Models;
 
 namespace RenovaRS.Data.Context
 {

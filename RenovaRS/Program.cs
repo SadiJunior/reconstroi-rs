@@ -17,8 +17,8 @@ builder.Services.AddDbContext<DataContext>(options =>
             .Configuration
             .GetConnectionString("DefaultConnection")));
 
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
-builder.Services.AddScoped<IAddressRepository, AddressRepository>();
 
 var app = builder.Build();
 

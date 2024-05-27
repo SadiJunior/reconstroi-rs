@@ -6,26 +6,27 @@ namespace RenovaRS.Models
     {
         public int Id { get; set; }
 
+        public int UserId { get; set; }
+
         public byte[]? Image { get; set; }
 
-        [Required]
-        public string Title { get; set; }
+        public required string Title { get; set; }
 
-        [Required]
-        public string Description { get; set; }
+        public required string Description { get; set; }
 
-        [Required]
-        public List<string> Type { get; set; }
+        public required IList<string> Type { get; set; }
 
-        public Address? Address { get; set; }
+        public string? Address { get; set; }
 
-        [Required]
-        public List<string> CityRanges { get; set; }
+        public string? PhoneNumber { get; set; }
 
-        [Required]
-        public Availability Availability { get; set; }
+        [Url]
+        public required string ContactLink { get; set; }
 
-        [Required]
-        public bool IsPaid { get; set; }
+        public required IList<string> CityRanges { get; set; }
+
+        public required Availability Availability { get; set; }
+
+        public required bool IsPaid { get; set; }
     }
 }
