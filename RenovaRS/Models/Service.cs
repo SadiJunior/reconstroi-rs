@@ -18,6 +18,7 @@ namespace RenovaRS.Models
 
         public string? Address { get; set; }
 
+        [Phone]
         public string? PhoneNumber { get; set; }
 
         [Url]
