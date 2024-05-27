@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace RenovaRS.Models
+namespace ReconstroiRS.Models
 {
     public class User
     {

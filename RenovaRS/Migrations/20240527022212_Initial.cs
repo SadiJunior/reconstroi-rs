@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace RenovaRS.Migrations
+namespace ReconstroiRS.Migrations
 {
     /// <inheritdoc />
     public partial class Initial : Migration

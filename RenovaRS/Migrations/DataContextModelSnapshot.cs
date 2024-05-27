@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using RenovaRS.Data;
+using ReconstroiRS.Data;
 
 #nullable disable
 
-namespace RenovaRS.Migrations
+namespace ReconstroiRS.Migrations
 {
     [DbContext(typeof(DataContext))]
     partial class DataContextModelSnapshot : ModelSnapshot
@@ -21,7 +21,7 @@ namespace RenovaRS.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("RenovaRS.Models.Service", b =>
+            modelBuilder.Entity("ReconstroiRS.Models.Service", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -72,7 +72,7 @@ namespace RenovaRS.Migrations
                     b.ToTable("Services");
                 });
 
-            modelBuilder.Entity("RenovaRS.Models.User", b =>
+            modelBuilder.Entity("ReconstroiRS.Models.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using RenovaRS.Data;
-using RenovaRS.Data.Context;
+using ReconstroiRS.Data;
+using ReconstroiRS.Data.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 

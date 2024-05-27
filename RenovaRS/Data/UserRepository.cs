@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RenovaRS.Data.Context;
-using RenovaRS.Models;
+using ReconstroiRS.Data.Context;
+using ReconstroiRS.Models;
 
-namespace RenovaRS.Data
+namespace ReconstroiRS.Data
 {
     public class UserRepository : IUserRepository
     {

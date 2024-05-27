@@ -1,6 +1,6 @@
-﻿using RenovaRS.Models;
+﻿using ReconstroiRS.Models;
 
-namespace RenovaRS.Data.Context
+namespace ReconstroiRS.Data.Context
 {
     public interface IServiceRepository
     {

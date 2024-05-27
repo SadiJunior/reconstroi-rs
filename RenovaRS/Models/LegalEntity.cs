@@ -1,4 +1,4 @@
-﻿namespace RenovaRS.Models
+﻿namespace ReconstroiRS.Models
 {
     public enum LegalEntity
     {

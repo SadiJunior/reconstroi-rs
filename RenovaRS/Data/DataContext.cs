@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RenovaRS.Models;
+using ReconstroiRS.Models;
 
-namespace RenovaRS.Data
+namespace ReconstroiRS.Data
 {
     public class DataContext : DbContext
     {
