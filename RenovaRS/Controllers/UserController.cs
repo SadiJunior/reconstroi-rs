@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;using RenovaRS.Data.Context;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using RenovaRS.Data.Context;
 using RenovaRS.Models;
 
 namespace RenovaRS.Controllers
@@ -8,6 +10,7 @@ namespace RenovaRS.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserRepository userRepository;
+
         public UserController(IUserRepository userRepository)
         {
             this.userRepository = userRepository;
@@ -30,6 +33,19 @@ namespace RenovaRS.Controllers
             }
 
             return Ok(user);
+        }
+
+        [HttpGet("{id}/services")]
+        public async Task<ActionResult<Service>> GetServicesByUserId(int id)
+        {
+            var services = await this.userRepository.GetServicesByUserIdAsync(id);
+
+            if (services.IsNullOrEmpty())
+            {
+                return NotFound($"Found no Services for User with ID {id}.");
+            }
+
+            return Ok(services);
         }
 
         [HttpPost]

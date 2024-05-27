@@ -18,6 +18,14 @@ namespace RenovaRS.Data
             return await dataContext.Users.ToListAsync();
         }
 
+        public async Task<IEnumerable<Service>> GetServicesByUserIdAsync(int id)
+        {
+            return await dataContext
+                .Services
+                .Where(service => service.UserId == id)
+                .ToListAsync();
+        }
+
         public async Task<User> GetUserAsync(int id)
         {
             return await dataContext.Users.FindAsync(id);

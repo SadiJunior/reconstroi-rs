@@ -6,6 +6,8 @@ namespace RenovaRS.Data.Context
     {
         Task<IEnumerable<User>> GetUsersAsync();
 
+        Task<IEnumerable<Service>> GetServicesByUserIdAsync(int id);
+
         Task<User> GetUserAsync(int id);
 
         Task<User> GetUserByEmailAsync(string email);
