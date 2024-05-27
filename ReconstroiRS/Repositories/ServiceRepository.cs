@@ -1,8 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ReconstroiRS.Data.Context;
+using ReconstroiRS.Data;
+using ReconstroiRS.Interfaces;
 using ReconstroiRS.Models;
 
-namespace ReconstroiRS.Data
+namespace ReconstroiRS.Repositories
 {
     public class ServiceRepository : IServiceRepository
     {
@@ -31,9 +32,9 @@ namespace ReconstroiRS.Data
         public async Task UpdateServiceAsync(Service service)
         {
             // TODO: Check this.
-            this.dataContext.Entry(service).State = EntityState.Modified;
+            dataContext.Entry(service).State = EntityState.Modified;
 
-            await this.dataContext.SaveChangesAsync();
+            await dataContext.SaveChangesAsync();
         }
 
         public async Task DeleteServiceAsync(int id)
@@ -65,7 +66,7 @@ namespace ReconstroiRS.Data
                 query = query.Where(service =>
                     service.Type.Any(t =>
                         EF.Functions.Like(t, typePattern)));
-                }
+            }
 
             if (hasCityRangeSearch)
             {

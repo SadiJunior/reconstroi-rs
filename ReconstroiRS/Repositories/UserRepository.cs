@@ -1,8 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ReconstroiRS.Data.Context;
+using ReconstroiRS.Data;
+using ReconstroiRS.Interfaces;
 using ReconstroiRS.Models;
 
-namespace ReconstroiRS.Data
+namespace ReconstroiRS.Repositories
 {
     public class UserRepository : IUserRepository
     {
@@ -49,7 +50,7 @@ namespace ReconstroiRS.Data
         public async Task UpdateUserAsync(User user)
         {
             // TODO: Check this.
-            this.dataContext.Entry(user).State = EntityState.Modified;
+            dataContext.Entry(user).State = EntityState.Modified;
 
             await dataContext.SaveChangesAsync();
         }
@@ -62,7 +63,7 @@ namespace ReconstroiRS.Data
             {
                 throw new KeyNotFoundException($"User with ID {id} not found.");
             }
-            
+
             dataContext.Users.Remove(user);
 
             await dataContext.SaveChangesAsync();

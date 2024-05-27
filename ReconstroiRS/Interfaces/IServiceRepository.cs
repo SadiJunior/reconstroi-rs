@@ -1,11 +1,11 @@
 ﻿using ReconstroiRS.Models;
 
-namespace ReconstroiRS.Data.Context
+namespace ReconstroiRS.Interfaces
 {
     public interface IServiceRepository
     {
         Task<IEnumerable<Service>> GetServicesAsync();
-        
+
         Task<Service> GetServiceAsync(int id);
 
         Task AddServiceAsync(Service service);

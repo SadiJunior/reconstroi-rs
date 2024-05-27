@@ -1,6 +1,6 @@
 ﻿using ReconstroiRS.Models;
 
-namespace ReconstroiRS.Data.Context
+namespace ReconstroiRS.Interfaces
 {
     public interface IUserRepository
     {

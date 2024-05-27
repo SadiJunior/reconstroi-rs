@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
-using ReconstroiRS.Data.Context;
+using ReconstroiRS.Interfaces;
 using ReconstroiRS.Models;
 
 namespace ReconstroiRS.Controllers

@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using ReconstroiRS.Data;
-using ReconstroiRS.Data.Context;
+using ReconstroiRS.Interfaces;
+using ReconstroiRS.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
